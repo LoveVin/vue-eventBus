@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import {eventBus} from '../eventBus.js'
+//import {eventBus} from '../eventBus.js'
 export default {
     props:{
         value: String
@@ -21,7 +21,7 @@ export default {
             this.$emit('sayHi','hi,parent!');
         },
         sibling(){
-            eventBus.$emit('sibling','hi,brother');
+            this.$eventBus.$emit('sibling','hi,brother');
         }
     }
 }

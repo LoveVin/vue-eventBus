@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import {eventBus} from '../eventBus.js'
+//import {eventBus} from '../eventBus.js'
 export default {
     data(){
         return {
@@ -13,7 +13,7 @@ export default {
         }
     },
     mounted(){
-        eventBus.$on('sibling', (msg)=>{
+        this.$eventBus.$on('sibling', (msg)=>{
             this.x = msg;
         })
     }
